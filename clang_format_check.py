@@ -140,7 +140,7 @@ def main():
         files = set()
         for pattern in args.file:
             for file in glob.iglob(pattern):
-                files.add(os.path.relpath(file))
+                files.add(os.path.realpath(file))
 
         file_list = list(files)
         print "Checking {} files...".format(len(file_list))
